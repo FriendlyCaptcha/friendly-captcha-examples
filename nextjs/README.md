@@ -1,10 +1,16 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn), adapted to include a form that is protected using [Friendly Captcha](https://friendlycaptcha.com).
+# Next.js Friendly Captcha example
 
-The relevant files to look at:
+This is an example integration of [Friendly Captcha](https://friendlycaptcha.com) with the Next.js fullstack framework.
+
+## Relevant files
 
 - [`components/friendlyCaptcha.js`](/components/friendlyCaptcha.js) the Friendly Captcha Widget as a React component.
 - [`pages/forms/basic.js`](/pages/forms/basic.js) an example form that is protected with a Friendly Captcha widget.
 - [`pages/api/submitBasic.js`](/pages/api/submitBasic.js) the endpoint that receives the data from the above form, it talks to the _siteverify_ endpoint to validate the captcha solution.
+
+## Screenshot
+![nextjs-example-gif](https://user-images.githubusercontent.com/1039510/149998211-734dbe14-59e4-4165-bfe1-f02ae83cf059.gif)
+
 
 ## Running the example
 

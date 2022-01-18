@@ -1,16 +1,16 @@
-# Next.js Friendly Captcha example
+# Next.js & Friendly Captcha
 
 This is an example integration of [Friendly Captcha](https://friendlycaptcha.com) with the Next.js fullstack framework.
+
+## Screenshot
+
+![nextjs-example-gif](https://user-images.githubusercontent.com/1039510/149998211-734dbe14-59e4-4165-bfe1-f02ae83cf059.gif)
 
 ## Relevant files
 
 - [`components/friendlyCaptcha.js`](/components/friendlyCaptcha.js) the Friendly Captcha Widget as a React component.
-- [`pages/forms/basic.js`](/pages/forms/basic.js) an example form that is protected with a Friendly Captcha widget.
+- [`pages/forms/basic.js`](/pages/forms/basic.js) an example form that is protected with a Friendly Captcha widget. The submit button is only enabled after the widget is done.
 - [`pages/api/submitBasic.js`](/pages/api/submitBasic.js) the endpoint that receives the data from the above form, it talks to the _siteverify_ endpoint to validate the captcha solution.
-
-## Screenshot
-![nextjs-example-gif](https://user-images.githubusercontent.com/1039510/149998211-734dbe14-59e4-4165-bfe1-f02ae83cf059.gif)
-
 
 ## Running the example
 
@@ -42,8 +42,8 @@ The [friendly-challenge](https://github.com/friendlycaptcha/friendly-challenge) 
   module.exports = withTM({});
   ```
 
-> Next.JS 12 and later will support these kinds of imports without plugins, so in the future this step may not be necessary.
+> Next.JS 12 and later will support ES Modules without plugins, so in the future this step may not be necessary.
 
 ### Supporting very old browsers
 
-If you want to support very old browsers (>4 years old), you sohuld import the compat version of the library. Change all imports from `friendly-challenge` to `friendly-challenge/compat`.
+If you want to support very old browsers (>4 years old, such as Internet Explorer 11), you should import the compat version of the library. Change the import from `friendly-challenge` to `friendly-challenge/compat`.

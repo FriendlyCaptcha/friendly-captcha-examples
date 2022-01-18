@@ -1,5 +1,5 @@
 import { useEffect, useRef, forwardRef } from "react";
-import { WidgetInstance } from "friendly-challenge/compat";
+import { WidgetInstance } from "friendly-challenge";
 
 const FriendlyCaptcha = forwardRef(({ sitekey, doneCallback, errorCallback, startMode }, widget) => {
   const container = useRef();

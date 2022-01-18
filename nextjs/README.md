@@ -1,6 +1,6 @@
 # Next.js & Friendly Captcha
 
-This is an example integration of [Friendly Captcha](https://friendlycaptcha.com) with the Next.js fullstack framework.
+This is an example integration of [Friendly Captcha](https://friendlycaptcha.com) with the [Next.js](https://nextjs.org) framework.
 
 ## Screenshot
 
@@ -8,9 +8,9 @@ This is an example integration of [Friendly Captcha](https://friendlycaptcha.com
 
 ## Relevant files
 
-- [`components/friendlyCaptcha.js`](/components/friendlyCaptcha.js) the Friendly Captcha Widget as a React component.
-- [`pages/forms/basic.js`](/pages/forms/basic.js) an example form that is protected with a Friendly Captcha widget. The submit button is only enabled after the widget is done.
-- [`pages/api/submitBasic.js`](/pages/api/submitBasic.js) the endpoint that receives the data from the above form, it talks to the _siteverify_ endpoint to validate the captcha solution.
+- [`components/friendlyCaptcha.js`](./components/friendlyCaptcha.js) the Friendly Captcha Widget as a React component.
+- [`pages/forms/basic.js`](./pages/forms/basic.js) an example form that is protected with a Friendly Captcha widget. The submit button is only enabled after the widget is done.
+- [`pages/api/submitBasic.js`](./pages/api/submitBasic.js) the endpoint that receives the data from the above form, it talks to the _siteverify_ endpoint to validate the captcha solution.
 
 ## Running the example
 

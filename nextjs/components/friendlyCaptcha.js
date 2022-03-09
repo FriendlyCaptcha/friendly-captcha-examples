@@ -22,7 +22,7 @@ const FriendlyCaptcha = forwardRef(({ sitekey, doneCallback, errorCallback, star
     }
 
     return () => {
-      if (widget.current != undefined) widget.current.reset();
+      if (widget.current != undefined) widget.current.destroy();
     };
   }, [container]);
 

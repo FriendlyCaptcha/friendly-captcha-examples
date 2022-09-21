@@ -61,7 +61,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ msg: "Name is required" });
   }
 
-  const frcCaptchaSolution = body.frcCaptchaSolution;
+  const frcCaptchaSolution = body["frc-captcha-solution"];
   if (!frcCaptchaSolution) {
     return res.status(500).json({ msg: "Anti-robot check solution was not present" });
   }

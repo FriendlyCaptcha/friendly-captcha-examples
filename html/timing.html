@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Friendly Captcha Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.7/widget.module.min.js"
+      async
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.7/widget.min.js"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <h1>Friendly Captcha Timing</h1>
+    <p>Dynamic difficulty is disabled for the sitekey in this example. The puzzle is not verified on submission, submit only reloads the page.</p>
+    <form>
+      <div
+        class="frc-captcha"
+        data-sitekey="FCMGEMUD2LAG9M2T"
+        data-callback="friendlyCaptchaCompleted"
+      ></div>
+      <input type="submit" value="Submit" style="margin-top: 1em"/>
+
+      <div>
+        <h3 id="timing">Start to finish:</h3>
+        <h3>Solution:</h3>
+        <code id="solution"></code>
+      </div>
+    </form>
+
+    <script>
+      let start = undefined;
+      const f = document.querySelector("form");
+      f.addEventListener(
+        "focusin",
+        function () {
+          console.log("Focus in!");
+          if (start === undefined) {
+            start = Date.now();
+            console.log("Started at ", start);
+          }
+        },
+        { once: true, passive: true }
+      );
+
+      f.addEventListener("change", () => console.log("Changed!"))
+      function friendlyCaptchaCompleted() {
+        const timeElapsed = Date.now() - start;
+        console.log(timeElapsed);
+        document.getElementById("timing").innerText += " " + timeElapsed / 1000 + "s";
+        document.getElementById("solution").innerText = document.querySelector("input[name=\"frc-captcha-solution\"]").value;
+      }
+    </script>
+  </body>
+</html>

@@ -22,6 +22,7 @@
   <body>
     <h1>Friendly Captcha Timing</h1>
     <p>Dynamic difficulty is disabled for the sitekey in this example. The puzzle is not verified on submission, submit only reloads the page.</p>
+    <p>Note that in Chromium-based browsers (Chrome, Edge, Brave, ...) WASM performance tends to be 10x slower with the Developer Tools open.</p>
     <form>
       <div
         class="frc-captcha"
@@ -40,22 +41,37 @@
     <script>
       let start = undefined;
       const f = document.querySelector("form");
-      f.addEventListener(
-        "focusin",
-        function () {
-          console.log("Focus in!");
+
+      function startTimer() {
           if (start === undefined) {
             start = Date.now();
             console.log("Started at ", start);
           }
-        },
+      }
+
+      f.addEventListener(
+        "focusin",
+        startTimer,
         { once: true, passive: true }
+      );
+
+      f.addEventListener( // Necessary for Safari.. Would be nicer not to need this.
+        "click",
+        function(evt) {
+          if (evt.target.type === "button") {
+            startTimer();
+          }
+
+        },
+        { once: false, passive: true }
       );
 
       f.addEventListener("change", () => console.log("Changed!"))
       function friendlyCaptchaCompleted() {
         const timeElapsed = Date.now() - start;
-        console.log(timeElapsed);
+        if (isNaN(timeElapsed)) {
+          document.getElementById("timing").innerText += " Timer failed, is this Safari?";
+        }
         document.getElementById("timing").innerText += " " + timeElapsed / 1000 + "s";
         document.getElementById("solution").innerText = document.querySelector("input[name=\"frc-captcha-solution\"]").value;
       }

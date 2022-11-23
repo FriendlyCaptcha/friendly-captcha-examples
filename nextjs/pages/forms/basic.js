@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Head from "next/head";
-import Layout from "../../components/layout";
+import Link from "next/link";
+import { useRef, useState } from "react";
 import FriendlyCaptcha from "../../components/friendlyCaptcha";
-import { useState, useRef } from "react";
+import Layout from "../../components/layout";
 
 const handleFormSubmit = async (event, setMessage, resetWidget) => {
   event.preventDefault();
@@ -79,9 +79,7 @@ export default function BasicForm() {
       ) : undefined}
 
       <div className="mt-2">
-        <Link href="/">
-          <a>Back to home</a>
-        </Link>
+        <Link href="/">Back to home</Link>
       </div>
     </Layout>
   );

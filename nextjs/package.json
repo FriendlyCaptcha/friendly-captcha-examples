@@ -6,7 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "friendly-challenge": "0.9.8",
+    "friendly-challenge": "0.9.9",
     "next": "13.0.4",
     "next-transpile-modules": "10.0.0",
     "react": "18.2.0",

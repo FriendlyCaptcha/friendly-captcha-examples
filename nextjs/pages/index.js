@@ -14,16 +14,11 @@ export default function Home() {
           Friendly Captcha &amp; <a href="https://nextjs.org">Next.js</a>
         </h1>
         <p className="description">
-          A <a href="https://friendlycaptcha.com">Friendly Captcha</a>{" "}
-          integration example project
+          A <a href="https://friendlycaptcha.com">Friendly Captcha</a> integration example project
         </p>
-        <Link href="/forms/basic">
-          <a className="card">
-            <h3>Form Example &rarr;</h3>
-            <p>
-              A Form that contains a Friendly Captcha widget and verification
-            </p>
-          </a>
+        <Link href="/forms/basic" className="card">
+          <h3>Form Example &rarr;</h3>
+          <p>A Form that contains a Friendly Captcha widget and verification</p>
         </Link>
 
         <div className="grid">
@@ -37,10 +32,7 @@ export default function Home() {
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
+          <a href="https://github.com/vercel/next.js/tree/master/examples" className="card">
             <h3>Examples &rarr;</h3>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
@@ -50,9 +42,7 @@ export default function Home() {
             className="card"
           >
             <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
           </a>
         </div>
       </main>

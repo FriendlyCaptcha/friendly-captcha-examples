@@ -27,7 +27,7 @@ This is an example integration of [Friendly Captcha](https://friendlycaptcha.com
 
 ### Set up a transpile plugin
 
-The [friendly-challenge](https://github.com/friendlycaptcha/friendly-challenge) library is exported as an ES module. To make Next.js underrstand it we install a plugin:
+The [friendly-challenge](https://github.com/friendlycaptcha/friendly-challenge) library is exported as an ES module. To make Next.js understand it we install a plugin:
 
 - Install `next-transpile-modules`
   ```shell
@@ -46,4 +46,4 @@ The [friendly-challenge](https://github.com/friendlycaptcha/friendly-challenge) 
 
 ### Supporting very old browsers
 
-If you want to support very old browsers (>4 years old, such as Internet Explorer 11), you should import the compat version of the library. Change the import from `friendly-challenge` to `friendly-challenge/compat`.
+If you want to support very outdated browsers (>4 years old, such as Internet Explorer 11), you should import the compat version of the library. Change the import from `friendly-challenge` to `friendly-challenge/compat`.

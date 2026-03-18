@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> This repository is no longer relevant. Please see our
+> [latest documentation](https://developer.friendlycaptcha.com/docs/v2)
+> instead!
+
 # friendly-captcha-examples
 
 Example integrations of Friendly Captcha.
